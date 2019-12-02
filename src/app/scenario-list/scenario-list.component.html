@@ -1,0 +1,32 @@
+<h2> Available Scenarios</h2>
+<div *ngFor="let scenario of scenarios; index as scenarioId">
+<div *ngIf="scenario.inQueue == false">
+  <h3>
+    <a [title]="scenario.name +' details'"  [routerLink]="['/scenarios', scenarioId]">
+    {{scenario.name}}
+    </a>
+  </h3>
+  <p *ngIf="scenario.description">
+    {{scenario.description}}
+  </p>
+  <button mat-raised-button color="primary" (click)="addToQueue(scenario,scenarioId)">
+        <i class="material-icons">add</i> Add to queue
+  </button>
+</div> 
+</div>
+<mat-divider></mat-divider>
+<h2> Scenario Queue </h2>
+<div *ngFor="let scenario of queue; index as queueId">
+  <h3>
+    <a [title]="scenario.name +' details'">
+    {{scenario.name}}
+    </a>
+  </h3>
+  <p *ngIf="scenario.description">
+    Description: {{scenario.description}}
+  </p>
+  <button mat-raised-button color="primary" (click)="removeFromQueue(scenario, queueId)">
+        <i class="material-icons">remove</i> Remove from queue
+  </button>
+</div>
+<mat-divider></mat-divider>

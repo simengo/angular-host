@@ -1,0 +1,19 @@
+{
+  "scenarios": [
+    {
+      "id": 0,
+      "name": "'CO2 Emissions too high'",
+      "difficulty": "'Medium'",
+      "description": "'There is smog in the city and the citizens get sick.'",
+      "inQueue": false
+    },
+    {
+      "id": 0,
+      "name": "'CO2 Emissions too high'",
+      "difficulty": "'Medium'",
+      "description": "'There is smog in the city and the citizens get sick.'",
+      "inQueue": false
+    }
+  ],
+  "queue": []
+}

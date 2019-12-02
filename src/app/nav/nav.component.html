@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+          </button>
+          <button [routerLink]="''" mat-icon-button>
+              <h1 style="display: inline-block;">SLE</h1>
+              <img style="display: inline-block;" src="../assets/3dd.png" alt="" style="width: 20px; height: auto; margin-left: 5px;">
+            </button>
+          <span class="icon-spacer"></span>
+          <button mat-icon-button>
+              <mat-icon [routerLink]="'/help'">help_outline</mat-icon>
+            </button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    
+      <mat-sidenav-container>
+          <mat-sidenav #sidenav mode="over">
+            <mat-nav-list>
+        
+              <a mat-list-item [routerLink]="'/scenarios'"> Scenarios </a>
+              <a mat-list-item [routerLink]="'/learning-contents'"> Learning Contents </a>
+              <a mat-list-item [routerLink]="'/dashboard'"> Dashboard </a>
+              <a mat-list-item (click)="sidenav.toggle()" mat-list-item></a>
+        
+            </mat-nav-list>
+          </mat-sidenav>
+          <mat-sidenav-content>
+              <div class="container">
+                  <router-outlet></router-outlet>
+                </div>
+          </mat-sidenav-content>
+        </mat-sidenav-container>
